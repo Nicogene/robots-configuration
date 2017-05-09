@@ -26,7 +26,7 @@
 
     <!-- LEFT LEG -->
     <devices file="hardware/motorControl/left_leg-eb6-j0_3-mc.xml" />
-    <devices file="hardware/motorControl/left_leg-eb7-j4_7-mc.xml" />
+    <devices file="hardware/motorControl/left_leg-eb7-j4_5-mc.xml" />
     <devices file="wrappers/motorControl/left_leg-mc_wrapper.xml" /> 
 
     <!-- RIGHT LEG -->

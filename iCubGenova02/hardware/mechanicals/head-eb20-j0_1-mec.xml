@@ -6,7 +6,7 @@
 
     <group name="GENERAL">
         <param name="MotioncontrolVersion">  3 </param>
-        <param name="Joints"> 2 </param> <
+        <param name="Joints"> 2 </param> 
 
         <param name="AxisMap">                  0               1               </param>    
         <param name="AxisName">              "neck_pitch"       "neck_roll"     </param>
