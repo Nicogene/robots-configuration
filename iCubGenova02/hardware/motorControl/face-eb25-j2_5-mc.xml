@@ -3,7 +3,7 @@
 
 <devices robot="iCubExpHeadV3" build="1">
 
-    <device name="face-j2_5-mc" type="embObjMotionControl">
+    <device name="face-eb25-j2_5-mc" type="embObjMotionControl">
     
         <params file="general.xml" />
         <params file="hardware/electronics/face-eb25-j2_5-eln.xml" />

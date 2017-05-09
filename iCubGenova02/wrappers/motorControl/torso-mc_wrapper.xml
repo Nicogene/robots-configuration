@@ -17,7 +17,7 @@
       <action phase="startup" level="5" type="attach">
 	  <paramlist name="networks">
 	  <!-- The param value must match the device name in the corresponding emsX file -->
-	      <elem name="FirstSetOfJoints">  torso_mc </elem>
+	      <elem name="FirstSetOfJoints">  torso-eb5-j0_2-mc </elem>
 	  </paramlist>
       </action>
 

@@ -23,9 +23,9 @@
 
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
-                <!-- The param value must match the device name in the corresponding face-jx_y-mc.xml file -->
-                <elem name="FirstSetOfJoints">  face-j0_1-mc </elem> 
-                <elem name="SecondSetOfJoints"> face-j2_5-mc </elem> 
+                <!-- The param value must match the device name in the corresponding face-ebN-jx_y-mc.xml file -->
+                <elem name="FirstSetOfJoints">  face-eb22-j0_1-mc </elem> 
+                <elem name="SecondSetOfJoints"> face-eb25-j2_5-mc </elem> 
             </paramlist>
         </action>
 

@@ -4,7 +4,7 @@
  
 <devices robot="iCubGenova02" build="1">
 
-    <device name="head-j0_1-mc" type="embObjMotionControl">
+    <device name="head-eb20-j0_1-mc" type="embObjMotionControl">
     
         <params file="general.xml" />
         <params file="hardware/electronics/head-eb20-j0_1-eln.xml" />
