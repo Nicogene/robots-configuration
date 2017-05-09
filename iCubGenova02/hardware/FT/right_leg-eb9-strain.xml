@@ -7,7 +7,7 @@
     
         <params file="general.xml"/>
 
-        <params file="hardware/electronics/right_lower_leg-ems9-eln.xml" />
+        <params file="hardware/electronics/right_leg-eb9-j4_5-eln.xml" />
     
         <group name="SERVICE">
             
