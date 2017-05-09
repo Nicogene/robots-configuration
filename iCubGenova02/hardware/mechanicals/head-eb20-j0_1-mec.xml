@@ -6,19 +6,16 @@
 
     <group name="GENERAL">
         <param name="MotioncontrolVersion">  3 </param>
-        <param name="Joints"> 2 </param> <!-- the number of joints of the robot part -->
-
-        <!-- joint number in sub-part           0              1           -->
-        <!-- joint name                         neck-pitch     neck-roll   -->         
+        <param name="Joints"> 2 </param> <
 
         <param name="AxisMap">                  0               1               </param>    
         <param name="AxisName">              "neck_pitch"       "neck_roll"     </param>
         <param name="AxisType">                "revolute"    "revolute"         </param>
         <param name="Encoder">                  182.044         182.044         </param>
-        <param name="fullscalePWM">           3360            3360            </param>
-        <param name="ampsToSensor">             1000.0             1000.0             </param>
+        <param name="fullscalePWM">             3360            3360            </param>
+        <param name="ampsToSensor">             1000.0             1000.0       </param>
         <param name="Gearbox_M2J">              161.68          161.68          </param>
-        <param name="Gearbox_E2J">   	          1             1               </param>
+        <param name="Gearbox_E2J">                1             1               </param>
         <param name="useMotorSpeedFbk">           1             1               </param>
         <param name="Verbose">   0    </param>
     </group>

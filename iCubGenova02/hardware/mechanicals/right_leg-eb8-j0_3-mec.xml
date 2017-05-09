@@ -13,15 +13,14 @@
         <param name="fullscalePWM">   32000         32000         32000         32000    </param>
         <param name="ampsToSensor">     1000.0        1000.0        1000.0        1000.0      </param>
         <param name="Gearbox_M2J">      100.00        -100.00       100.00        100.00   </param>
-        <param name="Gearbox_E2J">   	1             1             1              1       </param>
+        <param name="Gearbox_E2J">      1             1             1              1       </param>
         <param name="useMotorSpeedFbk"> 1             1             1              1       </param>
         <param name="MotorType">       "BLL_MOOG"     "BLL_MOOG"   "BLL_MOOG"  "BLL_KOLLM" </param>
 
-        <param name="Verbose">		0    	</param>
+        <param name="Verbose"> 0     </param>
     </group>
     
     <group name="LIMITS">
-        <!--                                    0             	1            2          3         -->
         <param name="hardwareJntPosMax">       85              85           70          0    </param>
         <param name="hardwareJntPosMin">      -30             -12          -70       -100    </param>
         <param name="rotorPosMin">              0               0            0          0    </param> 

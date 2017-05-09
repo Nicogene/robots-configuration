@@ -9,8 +9,7 @@
         <params file="hardware/electronics/face-eb22-j0_1-eln.xml" />
         <params file="hardware/mechanicals/face-eb22-j0_1-mec.xml" />
 
-        <!-- joint number in sub-part           0           1               -->
-        <!-- joint name                         jaw         eyelids         -->     
+
         <group name="LIMITS">
 
             <param name="jntPosMin">               +0          -175            </param> 

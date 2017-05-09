@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
- <!-- Initialization file for EMS 5 - Torso, 3 dof -->
-
 <devices robot="iCubGenova02" build="1">
   <device name="torso-eb5-j0_2-mc" type="embObjMotionControl">
       <params file="general.xml" />
       <params file="hardware/electronics/torso-eb5-j0_2-eln.xml" />
       <params file="hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
       
-    <params file="hardware/motorControl/torso-eb5-j0_2-mc_service.xml" />
+      <params file="hardware/motorControl/torso-eb5-j0_2-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                      50            30            70        </param>

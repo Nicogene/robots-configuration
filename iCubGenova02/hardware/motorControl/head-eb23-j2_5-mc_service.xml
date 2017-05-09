@@ -13,9 +13,6 @@
                 <param name="type">             mc4plus             </param> 
             </group>          
 
-            
-            
-
             <group name="JOINTMAPPING">
 
                 <group name="ACTUATOR">                 
