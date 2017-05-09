@@ -7,7 +7,7 @@
     
         <params file="general.xml" />     
 
-        <params file="hardware/electronics/right_lower_arm-ems4-eln.xml" />
+        <params file="hardware/electronics/right_lower_arm-eb4-eln.xml" />
         
         <group name="SERVICE">
         
@@ -30,7 +30,7 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       on_ems4_accel           on_ems4_gyros               
+                    <param name="id">       on_eb4_accel           on_eb4_gyros               
                                             r_upper_arm_4           r_upper_arm_1           r_upper_arm_3           r_upper_arm_2 
                                             r_forearm_1             r_forearm_2             r_hand                  r_hand_gyro
                     </param>

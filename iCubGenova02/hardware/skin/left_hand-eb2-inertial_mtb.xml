@@ -7,7 +7,7 @@
     
         <params file="general.xml" />     
 
-        <params file="hardware/electronics/left_lower_arm-ems2-eln.xml" />
+        <params file="hardware/electronics/left_arm-eb2-j4_15-eln.xml" />
         
         <group name="SERVICE">
         
@@ -30,7 +30,7 @@
                 </group>
 
                 <group name="SENSORS">
-                    <param name="id">       on_ems2_accel           on_ems2_gyros               
+                    <param name="id">       on_eb2_accel           on_eb2_gyros               
                                             l_upper_arm_4           l_upper_arm_1           l_upper_arm_3           l_upper_arm_2 
                                             l_forearm_1             l_forearm_2             l_hand                  l_hand_gyro
                     </param>
