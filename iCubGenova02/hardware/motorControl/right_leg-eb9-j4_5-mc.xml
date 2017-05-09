@@ -6,10 +6,10 @@
 <devices robot="iCubGenova02" build="1">
   <device name="right_lower_leg_mc" type="embObjMotionControl">
       <params file="general.xml" />
-      <params file="hardware/electronics/right_lower_leg-ems9-eln.xml" />
-      <params file="hardware/mechanicals/right_lower_leg-ems9-mec.xml" />
+      <params file="hardware/electronics/right_leg-eb9-j4_5-eln.xml" />
+      <params file="hardware/mechanicals/right_leg-eb9-j4_5-mec.xml" />
       
-    <params file="hardware/motorControl/right_lower_leg-ems9-mc-service.xml" />
+    <params file="hardware/motorControl/right_leg-eb9-j4_5-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                      30            20     </param>

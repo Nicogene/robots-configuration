@@ -18,7 +18,7 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "left_arm-ems2-j4_15"    </param> 
+            <param name="Name">                     "left_arm-eb2-j4_15"     </param> 
             <param name="regularsTXrate">           3                        </param> 
             <param name="protocolToUse">            MAXIMUM                  </param> 
         </group>

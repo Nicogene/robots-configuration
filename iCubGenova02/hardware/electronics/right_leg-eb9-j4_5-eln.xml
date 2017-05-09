@@ -4,11 +4,11 @@
 <params robot="iCubGenova02" build="1">
 
     <params file="hardware/electronics/pc104.xml" />
-  
+
     <group name="ETH_BOARD">
-  
+
         <group name="ETH_BOARD_PROPERTIES">
-            <param name="IpAddress">                10.0.1.7               </param>
+            <param name="IpAddress">                10.0.1.9               </param>
             <param name="IpPort">                   12345                  </param>
             <param name="Type">                     EMS4                   </param>
             <param name="maxSizeRXpacket">          768                    </param>
@@ -18,12 +18,12 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "left_leg-ems7-j4_5"   </param> 
+            <param name="Name">                     "right_leg-eb9-j4_5"   </param> 
             <param name="regularsTXrate">           5                      </param> 
             <param name="protocolToUse">            STANDARD               </param> 
         </group>
 
     </group>  
-      
+
 </params>
 

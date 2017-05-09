@@ -18,7 +18,7 @@
         </group>
 
         <group name="ETH_BOARD_SETTINGS">
-            <param name="Name">                     "left_leg-ems10-skin"    </param> 
+            <param name="Name">                     "left_leg-eb10-skin"     </param> 
             <param name="regularsTXrate">           3                        </param> 
             <param name="protocolToUse">            STANDARD                 </param> 
         </group>

@@ -6,10 +6,10 @@
 <devices robot="iCubGenova02" build="1">
   <device name="torso_mc" type="embObjMotionControl">
       <params file="general.xml" />
-      <params file="hardware/electronics/torso-ems5-eln.xml" />
-      <params file="hardware/mechanicals/torso-ems5-mec.xml" />
+      <params file="hardware/electronics/torso-eb5-j0_2-eln.xml" />
+      <params file="hardware/mechanicals/torso-eb5-j0_2-mec.xml" />
       
-    <params file="hardware/motorControl/torso-ems5-mc-service.xml" />
+    <params file="hardware/motorControl/torso-eb5-j0_2-mc_service.xml" />
 
     <group name="LIMITS">
         <param name="jntPosMax">                      50            30            70        </param>
