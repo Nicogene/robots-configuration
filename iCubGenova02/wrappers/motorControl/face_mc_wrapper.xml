@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD robotInterface 1.0//EN" "http://www.icub.org/DTD/robotInterfaceV1.0.dtd">
 
-<!--
-    NOTE: (m.a.) 
-    on 23jul15 i revised and formatted the file and aligned it as much as i could with values from grenoble (see file face_mc_wrapper.xml). 
-    i believe that nothing else is to be done in here
-    
- -->
-
-<devices robot="iCubExpHeadV3" build="1">
+<devices robot="iCubGenova02" build="1">
 
     <device name="face_mc_wrapper" type="controlboardwrapper2">
         <paramlist name="networks">
@@ -26,6 +19,7 @@
                 <!-- The param value must match the device name in the corresponding face-ebN-jx_y-mc.xml file -->
                 <elem name="FirstSetOfJoints">  face-eb22-j0_1-mc </elem> 
                 <elem name="SecondSetOfJoints"> face-eb25-j2_5-mc </elem> 
+                <elem name="Calibrator">        face_calibrator   </elem>
             </paramlist>
         </action>
 
