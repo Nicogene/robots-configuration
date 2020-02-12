@@ -139,7 +139,7 @@ jobs:
         cd build
         cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
                      -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
-                     -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DINSTALL_ALL_ROBOTS=ON ..
+                     -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DINSTALL_ALL_ROBOTS:BOOL=ON ..
 
     - name: Configure [Ubuntu/macOS]
       if: matrix.os == 'ubuntu-latest' || matrix.os == 'macOS-latest'
@@ -148,7 +148,7 @@ jobs:
         mkdir -p build
         cd build    
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-              -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DINSTALL_ALL_ROBOTS=ON  ..
+              -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DINSTALL_ALL_ROBOTS:BOOL=ON  ..
       
     - name: Build
       shell: bash
