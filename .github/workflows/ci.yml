@@ -133,7 +133,6 @@ jobs:
       if: matrix.os == 'windows-latest'
       shell: bash
       run: |
-        cd ${HOME}
         mkdir -p build
         cd build
         cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
@@ -144,9 +143,9 @@ jobs:
       if: matrix.os == 'ubuntu-latest' || matrix.os == 'macOS-latest'
       shell: bash
       run: |
-        cd ${HOME}
         mkdir -p build
-        cd build    
+        cd build
+        ls -la ..
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
               -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DINSTALL_ALL_ROBOTS:BOOL=ON ..
 
@@ -154,7 +153,6 @@ jobs:
     - name: Build
       shell: bash
       run: |
-        cd ${HOME}
         cd build
         # Fix for using YARP idl generators (that link ACE) in Windows 
         # See https://github.com/robotology/idyntree/issues/569 for more details
@@ -164,6 +162,5 @@ jobs:
     - name: Install
       shell: bash
       run: |
-        cd ${HOME}
         cd build
         cmake --build . --config ${{ matrix.build_type }} --target install
