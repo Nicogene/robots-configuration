@@ -146,7 +146,8 @@ jobs:
       shell: bash
       run: |
         mkdir -p build
-        cd build    
+        cd build
+        pwd
         cmake -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
               -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DINSTALL_ALL_ROBOTS:BOOL=ON  ..
       
