@@ -92,7 +92,7 @@ jobs:
         cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
                      -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
                      -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=OFF -DYARP_COMPILE_EXECUTABLES:BOOL=OFF \
-                     -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF..
+                     -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF ..
         cmake --build . --config ${{ matrix.build_type }} --target INSTALL
         # icub-contrib-common
         cd ${GITHUB_WORKSPACE}
