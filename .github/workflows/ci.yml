@@ -85,13 +85,6 @@ jobs:
         cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
                      -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
         cmake --build . --config ${{ matrix.build_type }} --target INSTALL
-        # icub-contrib-common
-        cd ${GITHUB_WORKSPACE}
-        git clone https://github.com/robotology/icub-contrib-common.git --depth 1 --branch master
-        cd icub-contrib-common && mkdir -p build && cd build
-        cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
-                     -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
-        cmake --build . --config ${{ matrix.build_type }} --target INSTALL 
         # yarp
         cd ${GITHUB_WORKSPACE}
         git clone https://github.com/robotology/yarp.git --depth 1 --branch master
@@ -101,6 +94,13 @@ jobs:
                      -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DCREATE_LIB_MATH:BOOL=ON -DCREATE_SHARED_LIBRARY:BOOL=ON \
                      -DCMAKE_BUILD_TYPE=${TRAVIS_BUILD_TYPE} -DYARP_COMPILE_RobotTestingFramework_ADDONS:BOOL=ON ..
         cmake --build . --config ${{ matrix.build_type }} --target INSTALL
+        # icub-contrib-common
+        cd ${GITHUB_WORKSPACE}
+        git clone https://github.com/robotology/icub-contrib-common.git --depth 1 --branch master
+        cd icub-contrib-common && mkdir -p build && cd build
+        cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
+                     -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
+        cmake --build . --config ${{ matrix.build_type }} --target INSTALL 
         
     - name: Source-based Dependencies [Ubuntu/macOS]
       if: matrix.os == 'ubuntu-latest' || matrix.os == 'macOS-latest'
@@ -112,25 +112,18 @@ jobs:
         cd ycm && mkdir -p build && cd build
         cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
         cmake --build . --config ${{ matrix.build_type }} --target install
-        # icub-contrib-common
-        cd ${GITHUB_WORKSPACE}
-        git clone https://github.com/robotology/icub-contrib-common.git --depth 1 --branch master
-        cd icub-contrib-common && mkdir -p build && cd build
-        cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
-        cmake --build . --config ${{ matrix.build_type }} --target install 
         # yarp
         cd ${GITHUB_WORKSPACE}
         git clone https://github.com/robotology/yarp.git --depth 1 --branch master
         cd yarp && mkdir -p build && cd build
         cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install \
         -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DYARP_COMPILE_RobotTestingFramework_ADDONS:BOOL=ON ..
-        cmake --build . --config ${{ matrix.build_type }} --target install 
-        # icub-main
+        cmake --build . --config ${{ matrix.build_type }} --target install
+        # icub-contrib-common
         cd ${GITHUB_WORKSPACE}
-        git clone https://github.com/robotology/icub-main.git --depth 1 --branch devel
-        cd icub-main && mkdir -p build && cd build
-        cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-               -DENABLE_icubmod_cartesiancontrollerserver=ON -DENABLE_icubmod_cartesiancontrollerclient=ON -DENABLE_icubmod_gazecontrollerclient=ON ..
+        git clone https://github.com/robotology/icub-contrib-common.git --depth 1 --branch master
+        cd icub-contrib-common && mkdir -p build && cd build
+        cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
         cmake --build . --config ${{ matrix.build_type }} --target install 
       env:
         # This is necessary only on macOS/homebrew, but on Linux it should be ignored
