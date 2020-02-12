@@ -79,14 +79,14 @@ jobs:
       shell: bash
       run: |
         # ycm
-        cd ${GITHUB_WORKSPACE}
+        cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/ycm.git --depth 1 --branch master
         cd ycm && mkdir -p build && cd build
         cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
                      -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
         cmake --build . --config ${{ matrix.build_type }} --target INSTALL 
         # yarp
-        cd ${GITHUB_WORKSPACE}
+        cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/yarp.git --depth 1 --branch master
         cd yarp && mkdir -p build && cd build
         cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
@@ -95,7 +95,7 @@ jobs:
                      -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF ..
         cmake --build . --config ${{ matrix.build_type }} --target INSTALL
         # icub-contrib-common
-        cd ${GITHUB_WORKSPACE}
+        cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/icub-contrib-common.git --depth 1
         cd icub-contrib-common && mkdir -p build && cd build
         cmake -A x64 -DCMAKE_TOOLCHAIN_FILE=${VCPKG_ROBOTOLOGY_ROOT}/scripts/buildsystems/vcpkg.cmake \
@@ -107,20 +107,20 @@ jobs:
       shell: bash
       run: |
         # ycm
-        cd ${GITHUB_WORKSPACE}
+        cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/ycm.git --depth 1 --branch master
         cd ycm && mkdir -p build && cd build
         cmake -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
         cmake --build . --config ${{ matrix.build_type }} --target install 
         # yarp
-        cd ${GITHUB_WORKSPACE}
+        cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/yarp.git --depth 1 --branch master
         cd yarp && mkdir -p build && cd build
         cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
         -DYARP_COMPILE_DEVICE_PLUGINS:BOOL=OFF -DYARP_COMPILE_EXECUTABLES:BOOL=OFF -DYARP_COMPILE_CARRIER_PLUGINS:BOOL=OFF ..
         cmake --build . --config ${{ matrix.build_type }} --target install 
         # icub-contrib-common
-        cd ${GITHUB_WORKSPACE}
+        cd ${GITHUB_WORKSPACE}/..
         git clone https://github.com/robotology/icub-contrib-common.git --depth 1
         cd icub-contrib-common && mkdir -p build && cd build
         cmake  -DCMAKE_PREFIX_PATH=${GITHUB_WORKSPACE}/install -DCMAKE_INSTALL_PREFIX=${GITHUB_WORKSPACE}/install -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} ..
