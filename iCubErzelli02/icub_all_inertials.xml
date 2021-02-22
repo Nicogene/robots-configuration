@@ -113,6 +113,9 @@
     <xi:include href="cartesian/left_arm-cartesian.xml" />
     <xi:include href="cartesian/right_arm-cartesian.xml" />
 
+    <!-- ESTIMATORS -->
+    <xi:include href="estimators/wholebodydynamics.xml" />
+
 
 </devices>
 </robot>
